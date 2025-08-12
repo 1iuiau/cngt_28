@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CNGT</title>
   <style>
     body {
@@ -14,22 +14,26 @@
       justify-content: flex-start;
       min-height: 100vh;
       overflow-x: hidden;
+      font-family: Arial, sans-serif;
     }
 
     img {
       max-width: 90%;
+      max-height: 90vh;
       height: auto;
       margin: 40px 0;
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       opacity: 0;
       transform: translateY(30px);
-      animation: fadeInUp 1.5s ease forwards;
+      animation: fadeInUp 1.2s ease forwards;
     }
 
-    img:nth-of-type(2) {
-      animation-delay: 1s;
-    }
+    /* 依序延遲圖片動畫 */
+    img:nth-of-type(1) { animation-delay: 0.3s; }
+    img:nth-of-type(2) { animation-delay: 0.8s; }
+    img:nth-of-type(3) { animation-delay: 1.3s; }
+    img:nth-of-type(4) { animation-delay: 1.8s; }
 
     @keyframes fadeInUp {
       to {
@@ -40,7 +44,8 @@
   </style>
 </head>
 <body>
-  <img src="photo1.jpg" alt="photo1">
-  <img src="photo2.jpg" alt="photo2">
+  <!-- 如果檔案和 index.html 在同一資料夾 -->
+  <img src="./photo1.jpg" alt="photo1">
+  <img src="./photo2.jpg" alt="photo2">
 </body>
 </html>
